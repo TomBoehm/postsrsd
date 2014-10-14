@@ -14,7 +14,9 @@ Installation on Mac OS X Server
 Copy `postsrsd` to `/usr/local/sbin/postsrsd`
 
 Generate a secret by 
+
     sudo uuidgen > /etc/postsrsd.secret
+
 or write the secret of your chouice to /etc/postsrsd.secret
 then `chmod 600 /etc/postsrsd.secret`
 
@@ -26,6 +28,7 @@ Modify `/Library/Server/Mail/Config/postfix/main.cf` as described at roehling/po
     recipient_canonical_classes= envelope_recipient
 
 Start postsrsd
+
     /usr/local/sbin/postsrsd -s /etc/postsrsd.secret -d mydomain.com -f 10001 -4 -X my-second-domain.com
 
 you should generate a LaunchDaemon for this command

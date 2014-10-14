@@ -17,8 +17,9 @@ Generate a secret by
 
     sudo uuidgen > /etc/postsrsd.secret
 
-or write the secret of your chouice to /etc/postsrsd.secret
-then `chmod 600 /etc/postsrsd.secret`
+or write the secret of your chouice to /etc/postsrsd.secret then 
+
+    chmod 600 /etc/postsrsd.secret
 
 Modify `/Library/Server/Mail/Config/postfix/main.cf` as described at roehling/postsrsd and add
 
